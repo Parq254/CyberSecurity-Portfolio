@@ -77,8 +77,13 @@ On a scale of 1 to 10, the risk score is 8, which is fairly high. This is due to
 *  **Physical Security:**
   * Strong physical security is good, but it doesn't protect against cyber threats.
 
+<<<<<<< HEAD
 *  **EU breach notification plan:**
   *This is a good reactive measure, but does not stop attacks from happening.
+=======
+* + **EU breach notification plan:**
+  * This is a good reactive measure, but does not stop attacks from happening.
+>>>>>>> 7894142 (updated audit.md)
 
 ## Overall Assessment:
 
