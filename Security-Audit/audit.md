@@ -50,35 +50,35 @@ On a scale of 1 to 10, the risk score is 8, which is fairly high. This is due to
 ### **Critical Vulnerabilities and High-Risk Factors:**
 
 *  **Lack of Data Protection:**
-* The most significant issue is the absence of encryption for sensitive customer credit card information. This directly violates basic security practices and compliance regulations like PCI DSS.
-* Unrestricted access to all internally stored data, including cardholder data and PII/SPII, exposes the company to severe data breaches and regulatory penalties.
+  * The most significant issue is the absence of encryption for sensitive customer credit card information. This directly violates basic security practices and compliance regulations like PCI DSS.
+  * Unrestricted access to all internally stored data, including cardholder data and PII/SPII, exposes the company to severe data breaches and regulatory penalties.
 
 *  **Compliance Violations:**
-* The high risk from governing bodies indicates a failure to adhere to compliance regulations. This is compounded by the lack of necessary controls. The EU breach notification plan is good, but does not prevent the breach.
+  * The high risk from governing bodies indicates a failure to adhere to compliance regulations. This is compounded by the lack of necessary controls. The EU breach notification plan is good, but does not prevent the breach.
 
 *  **Weak Access Controls:**
-* The absence of least privilege and separation of duties creates significant internal security risks. Any employee could potentially access and misuse sensitive data.
-* The inadequate password policy and lack of centralized password management further weaken access controls.
+  * The absence of least privilege and separation of duties creates significant internal security risks. Any employee could potentially access and misuse sensitive data.
+  * The inadequate password policy and lack of centralized password management further weaken access controls.
 
 *  **Lack of Disaster Recovery and Backups:**
-* The absence of disaster recovery plans and data backups poses a critical risk to business continuity. A single major incident could lead to irreversible data loss and operational failure.
+  * The absence of disaster recovery plans and data backups poses a critical risk to business continuity. A single major incident could lead to irreversible data loss and operational failure.
 
 *  **Missing Intrusion Detection System (IDS):**
-* While a firewall and antivirus are in place, the lack of an IDS means the company has limited ability to detect and respond to active intrusions.
+  * While a firewall and antivirus are in place, the lack of an IDS means the company has limited ability to detect and respond to active intrusions.
 
 ### **Mitigating Factors (But Insufficient):**
 
 *  **Firewall and Antivirus:**
-* These are positive steps, but they are not sufficient to address the major vulnerabilities.
+  * These are positive steps, but they are not sufficient to address the major vulnerabilities.
 
 *  **Data Integrity and Availability:**
-* While ensuring data integrity and availability is important, it doesn't address the critical confidentiality and access control issues.
+  * While ensuring data integrity and availability is important, it doesn't address the critical confidentiality and access control issues.
 
 *  **Physical Security:**
-* Strong physical security is good, but it doesn't protect against cyber threats.
+  * Strong physical security is good, but it doesn't protect against cyber threats.
 
-* + **EU breach notification plan:**
-This is a good reactive measure, but does not stop attacks from happening.
+*  **EU breach notification plan:**
+  *This is a good reactive measure, but does not stop attacks from happening.
 
 ## Overall Assessment:
 
