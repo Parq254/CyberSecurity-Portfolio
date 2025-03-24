@@ -28,41 +28,41 @@ Now that you have captured data packets using a network analyzer tool, it is you
 As an analyst, you can inspect network traffic and network data to determine what is causing network-related issues during cybersecurity incidents. Later in this course, you will demonstrate how to manage and resolve incidents. For now, you only need to analyze the situation. 
 
 # Summary of the Problem Found in the tcpdump Log
-* ### Protocols Used:*
+* ### Protocols Used:
   * UDP (User Datagram Protocol) was used for the DNS query.
   * ICMP (Internet Control Message Protocol) was used for the error response.
 
-* ### Log Details:*
+* ### Log Details:
   * The log shows that the user's computer (192.51.100.15) sent UDP packets to the DNS server (203.0.113.2) on port 53, requesting the IP address for www.yummyrecipesforme.com.
   * The DNS server responded with ICMP "destination port unreachable" errors.
   * The specific error message was "udp port 53 unreachable."
   * The error was repeated multiple times.
   * The time the errors started to occur was 13:24:32.192571 which is 1:24pm 32.192571 seconds.
 
-* ### Interpretation:*
+* ### Interpretation:
   * The DNS server was not responding to UDP requests on port 53.
   * This indicates a problem with the DNS service on the server, potentially due to a service outage, firewall blocking, or misconfiguration.
   * The root cause of the webpage not loading is the inability to resolve the domain name to an IP address.
 
 ## Analysis and Solution
-* ### Problem Report Time:* 
+* ### Problem Report Time: 
 The issue was first observed at 1:24 p.m., 32.192571 seconds, based on the tcpdump log timestamps.
 
-* ### Scenario, Events, and Symptoms:*
+* ### Scenario, Events, and Symptoms:
   * Customers reported being unable to access www.yummyrecipesforme.com.
   * Users received a "destination port unreachable" error in their browsers.
   * Network analysis revealed that DNS queries were failing with ICMP "udp port 53 unreachable" errors.
 
-* ### Current Status:*
+* ### Current Status:
   * The website is inaccessible due to DNS resolution failures.
   * The DNS server at 203.0.113.2 is not responding to UDP requests on port 53.
 
-* ### Information Discovered:*
+* ### Information Discovered:
   * The issue is isolated to DNS resolution.
   * ICMP errors indicate a problem with the DNS service on the server.
   * The issue is with UDP port 53, the port that the DNS service utilizes.
 
-* ### Next Steps:*
+* ### Next Steps:
   * Verify the status of the DNS service on the server (203.0.113.2).
   * Check the server's firewall configuration for any blocks on UDP port 53.
   * Examine the DNS server's logs for error messages.
@@ -70,19 +70,19 @@ The issue was first observed at 1:24 p.m., 32.192571 seconds, based on the tcpdu
   * Restart the DNS service.
   * If restarting the service does not work, check the DNS server configuration files for errors.
 
-* ### Suspected Root Cause:*
+* ### Suspected Root Cause:
   * The most likely root cause is a problem with the DNS service on the server, such as a service outage, firewall blocking UDP port 53, or a misconfiguration of the DNS service.
 
 
 # Cybersecurity Incidence Report
-* ## Part 1: Incident Summary*
+* ## Part 1: Incident Summary
 
 * Incident Description: Customers reported website inaccessibility (www.yummyrecipesforme.com) with "destination port unreachable" errors. Network analysis using tcpdump revealed ICMP "udp port 53 unreachable" errors from the DNS server (203.0.113.2) in response to UDP DNS queries.
 * Affected Systems/Services: DNS service on server 203.0.113.2, www.yummyrecipesforme.com website.
 * Date/Time of Incident: First observed at 1:24 p.m., 32.192571 seconds.
 * Summary of tcpdump Log Analysis: The tcpdump log showed UDP DNS queries to port 53 of the DNS server, which were met with repeated ICMP "udp port 53 unreachable" errors. This indicates a problem with the DNS service's ability to receive UDP packets on port 53.
 
-* ## Part 2: Incident Analysis and Resolution*
+* ## Part 2: Incident Analysis and Resolution
 
 * Initial Report Details: Customers reported website inaccessibility with "destination port unreachable" errors.
 * Current Status: The website is inaccessible due to DNS resolution failures. The DNS server is not responding to UDP requests on port 53.
